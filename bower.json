@@ -1,0 +1,26 @@
+{
+  "name": "wedding-app",
+  "description": "Wedding App of Francesco and Fatiha",
+  "main": "",
+  "authors": [
+    "francesco.greppi@gmail.com"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "wedding, lake como, angular app, es6",
+    "litr"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "devDependencies": {
+    "angular": "^1.5.0",
+    "angular-bootstrap": "^1.1.2",
+    "jquery": "^2.2.1",
+    "angular-ui-router": "^0.2.18",
+    "bootstrap": "~3.3.6",
+    "angular-messages": "~1.5.0",
+    "firebase": "~2.4.1",
+    "angularfire": "~1.1.4"
+  }
+}

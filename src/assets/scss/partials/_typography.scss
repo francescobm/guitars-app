@@ -1,0 +1,43 @@
+h1, h2, h3, h4{
+ font-family:$font-Normal;
+}
+
+p, a{
+ font-family: $font-Normal;
+}
+
+h1{
+ font-size: 55px;
+ line-height: 60px;
+ &.hero{
+ 	font-family:$font-Normal;
+ }
+}
+
+h2{
+ font-size: 45px;
+ line-height: 51px;
+}
+
+h3{
+ font-size: 40px;
+ line-height: 46px;
+}
+
+h4{
+ font-size: 28px;
+ line-height: 30px;
+}
+
+p{
+  font-size: 18px;
+  line-height: 26px;
+  margin:15px 0;
+}
+
+a{
+	font-weight:bold;
+  &:hover{
+  	text-decoration: none;
+  }
+}

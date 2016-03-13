@@ -1,0 +1,37 @@
+<div class="modal-header">
+    <h3 ng-if="!productModalCtrl.isModifying" class="modal-title">Add a new product</h3>
+    <h3 ng-if="productModalCtrl.isModifying" class="modal-title">Modify existing product</h3>
+</div>
+<div class="modal-body">
+    <section>
+        <form name="AddProductForm" ng-submit="productModalCtrl.addProduct(AddProductForm.$valid, productModalCtrl.isModifying)"novalidate autocomplete="off">
+            <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" name="Name" ng-model="productModalCtrl.form.Name" required>
+                    <div ng-messages="AddProductForm.Name.$error" ng-show="AddProductForm.$submitted || AddProductForm.Name.$touched" class="help-block" role="alert">
+                        <span ng-message="required" class="help">Please insert the product name.</span>
+                    </div>
+            </div>
+            <div class="form-group">
+                    <label>Description</label>
+                    <input type="text" class="form-control" name="Description" ng-model="productModalCtrl.form.Description" required>
+                    <div ng-messages="AddProductForm.Description.$error" ng-show="AddProductForm.$submitted || AddProductForm.Description.$touched" class="help-block" role="alert">
+                        <span ng-message="required" class="help">Please insert the product description.</span>
+                    </div>
+            </div>
+            <div class="form-group">
+                    <label>Price</label>
+                    <input type="text" class="form-control" name="Price" ng-model="productModalCtrl.form.Price" required>
+                    <div ng-messages="AddProductForm.Price.$error" ng-show="AddProductForm.$submitted || AddProductForm.Price.$touched" class="help-block" role="alert">
+                        <span ng-message="required" class="help">Please insert the password.</span>
+                    </div>
+            </div>
+            <button ng-if="!productModalCtrl.isModifying" type="submit" class="btn btn-primary" ng-disabled="AddProductForm.$invalid">Add product</button>
+            <button ng-if="productModalCtrl.isModifying" type="submit" class="btn btn-primary" ng-disabled="AddProductForm.$invalid">Modify product</button>
+        </form>
+        <p ng-if="productModalCtrl.added">Product succesfully added</p>
+    </section>
+</div>
+<div class="modal-footer">
+    <a class="btn btn-warning" type="button" ng-click="productModalCtrl.closeWindow()">Cancel</a>
+</div>

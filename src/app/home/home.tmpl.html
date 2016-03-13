@@ -1,0 +1,46 @@
+<nav class="navbar navbar-defaul custom-header">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="row">
+    	<div class="col-xs-12">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href ui-sref="home">Crud App</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a class="active" href ui-sref="home">Home</a></li>
+		        <li><a href ui-sref="admin" ng-if="homeCtrl.loggedin">Admin</a></li>
+		        <li><a href ng-click="homeCtrl.launchLoginModal()" ng-if="!homeCtrl.loggedin">Login</a></li>
+		         <li><a href ng-click="homeCtrl.logout()" ng-if="homeCtrl.loggedin">Logout</a></li>
+		      </ul>
+		    </div> 
+		 </div>
+ 	</div>
+  </div> 
+</nav>
+<section class="main home">
+	<div class="container">
+		<div class="row">	
+			<div ng-repeat="product in homeCtrl.productList" class="col-sm-3">
+        		<p>{{product.Name}}</p>
+        		<p>{{product.Description}}</p>
+        		<p>{{product.Price}}</p>
+            </div>	
+		</div>
+	</div>
+</section> 
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+				<p>©2016 Francesco Greppi. All Rights Reserved.</p>
+			</div>
+		</div>
+	</div>
+</footer>

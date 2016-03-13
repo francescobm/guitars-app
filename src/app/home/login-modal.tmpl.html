@@ -1,0 +1,28 @@
+<div class="modal-header">
+    <h3 class="modal-title">Login</h3>
+</div>
+<div class="modal-body">
+    <section>
+        <form name="LoginForm" ng-submit="loginModalCtrl.login(LoginForm.$valid)"novalidate autocomplete="off">
+            <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" name="Email" ng-model="loginModalCtrl.form.Email" required>
+                    <div ng-messages="LoginForm.Email.$error" ng-show="LoginForm.$submitted || LoginForm.Email.$touched" class="help-block" role="alert">
+                        <span ng-message="required" class="help">Please insert your email.</span>
+                    </div>
+            </div>
+            <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="Password" ng-model="loginModalCtrl.form.Password" required>
+                    <div ng-messages="LoginForm.Password.$error" ng-show="LoginForm.$submitted || LoginForm.Password.$touched" class="help-block" role="alert">
+                        <span ng-message="required" class="help">Please insert the password.</span>
+                    </div>
+            </div>
+            <p class="help" ng-if="loginModalCtrl.wrongCredentials">Please make sure you insert the correct credentials.</p>
+            <button type="submit" class="btn btn-primary" target="_blank" ng-disabled="LoginForm.$invalid">Login</button>
+        </form>
+    </section>
+</div>
+<div class="modal-footer">
+    <a class="btn btn-warning" type="button" ng-click="loginModalCtrl.$uibModalInstance.close()">Cancel</a>
+</div>

@@ -26,6 +26,13 @@
                         <span ng-message="required" class="help">Please insert the password.</span>
                     </div>
             </div>
+            <div class="form-group">
+                    <label>Image Name</label>
+                    <input type="text" class="form-control" name="Image" ng-model="productModalCtrl.form.Image" required>
+                    <div ng-messages="AddProductForm.Image.$error" ng-show="AddProductForm.$submitted || AddProductForm.Image.$touched" class="help-block" role="alert">
+                        <span ng-message="required" class="help">Please specify the image name.</span>
+                    </div>
+            </div>
             <button ng-if="!productModalCtrl.isModifying" type="submit" class="btn btn-primary" ng-disabled="AddProductForm.$invalid">Add product</button>
             <button ng-if="productModalCtrl.isModifying" type="submit" class="btn btn-primary" ng-disabled="AddProductForm.$invalid">Modify product</button>
         </form>

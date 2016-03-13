@@ -148,5 +148,7 @@ gulp.task('watch', function () {
   gulp.watch('src/**/*.es6', ['appSequence']);
   // watch app index file (inject task will automatically copy index file in dist)
   gulp.watch('src/index.html', ['appSequence']);
+  // images
+  gulp.watch('src/assets/images/*', ['image']);
 
 });

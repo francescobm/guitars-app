@@ -26,9 +26,10 @@
 </nav>
 <section class="main home">
 	<div class="container">
-		<div class="row">	
+		<div class="row text-center">	
 			<div ng-repeat="product in homeCtrl.productList" class="col-sm-3">
         		<p>{{product.Name}}</p>
+        		<img width="200" ng-src="assets/images/{{product.Image}}"/>
         		<p>{{product.Description}}</p>
         		<p>{{product.Price}}</p>
             </div>	

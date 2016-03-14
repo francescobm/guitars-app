@@ -1,0 +1,26 @@
+<nav class="navbar navbar-defaul custom-header">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="row">
+    	<div class="col-xs-12">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href ui-sref="home">Guitar Store</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a ng-class="{active: headerCtrl.active === 'home'}" href ui-sref="home">Home</a></li>
+		        <li><a ng-class="{active: headerCtrl.active === 'admin'}" href ui-sref="admin" ng-if="headerCtrl.loggedin">Admin</a></li>
+		        <li><a href ng-click="headerCtrl.launchLoginModal()" ng-if="!headerCtrl.loggedin">Login</a></li>
+		        <li><a href ng-click="headerCtrl.logout()" ng-if="headerCtrl.loggedin">Logout</a></li>
+		      </ul>
+		    </div> 
+		 </div>
+ 	</div>
+  </div> 
+</nav>

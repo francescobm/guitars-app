@@ -21,10 +21,8 @@ a{
 	
 	a{
 		color:$color-font-light;
-		font-family: $font-Normal;
-		font-size: 18px;
+		font-size: 16px;
     	letter-spacing: 0.02em;
-    	font-weight:normal;
 
     	&.active{
 		color:$color-font-redish;
@@ -44,70 +42,26 @@ section{
 	min-height: 100%;
 	background:$color-white;
 
-	p span{
-		color:$color-font-redish;
-	}
-
-	a{
-		color:$color-font-redish;
-	}
-
 	&.main{
 		padding: 50px 0 100px;
+	}
 
-		&.home{
-			img{ margin:10px 0 30px}
-			p{
-				padding: 0 15px;
+	.table{
+		margin-top:20px;
+	}
+	a{
+		&.delete{
+			color:$color-font-redish;
+			&:hover{
+				color:$color-font-redish;
 			}
 		}
-		&.discover{
-			#map{
-    			margin-top: 20px;
-				height:450px;
-			}
-			.gallery-grid{
-				
-				img{
-					box-shadow: 2px 2px 5px #888888;
-				}
-
-				p{
-					font-weight:bold;
-					margin-top:30px;
-				}
-
-				a{
-					font-size: 18px;
-  					line-height: 24px;
-					display:block;
-					font-weight:normal;
-					margin-top:5px;
-					text-decoration: underline;
-				}
+		&.modify{
+			color:$color-font-blue;
+			&:hover{
+				color:$color-font-blue;
 			}
 		}
-		&.area{
-			.row{
-				&.topic{
-					padding:30px 0;
-				}
-			}
-			#directionMap{
-				height:300px;
-			}
-			#dvPanel{
-				height:300px;
-				overflow-y:scroll;
-			}
-			#areaMap{
-				height:300px;
-			}
-
-			img{
-				padding: 20px 0;
-			}
-		}	
 	}
 }
 // footer

@@ -7,6 +7,8 @@ import { ProductModalController } from './admin/product-modal.controller.es6';
 // services
 import { FirebaseService } from './_core/services/firebase.service.es6';
 
+//directives
+import { HeaderDirective } from './_core/directives/header.directive.es6';
 
 let routeErrorHandler = ["$rootScope", "$state", function($rootScope, $state) {
 
@@ -56,6 +58,7 @@ let app = angular.module('crudApp', ['firebase', 'ui.router','ui.bootstrap', 'ng
     .controller('AdminController', AdminController)
     .controller('ProductModalController', ProductModalController)
     .factory('FirebaseService', FirebaseService)
+    .directive('headerDirective', HeaderDirective)
     .run(routeErrorHandler);
 
 // initialize app

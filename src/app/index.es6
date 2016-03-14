@@ -7,6 +7,7 @@ import { ProductModalController } from './admin/product-modal.controller.es6';
 // services
 import { FirebaseService } from './_core/services/firebase.service.es6';
 
+
 let routeErrorHandler = ["$rootScope", "$state", function($rootScope, $state) {
 
 	$rootScope.$on("$stateChangeError", function(event, toState, toParams, fromState, fromParams, error) {

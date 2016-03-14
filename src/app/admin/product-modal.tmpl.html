@@ -7,30 +7,39 @@
         <form name="AddProductForm" ng-submit="productModalCtrl.addProduct(AddProductForm.$valid, productModalCtrl.isModifying)"novalidate autocomplete="off">
             <div class="form-group">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="Name" ng-model="productModalCtrl.form.Name" required>
+                    <input type="text" class="form-control" name="Name" ng-model="productModalCtrl.form.Name" ng-maxlength="20" required>
                     <div ng-messages="AddProductForm.Name.$error" ng-show="AddProductForm.$submitted || AddProductForm.Name.$touched" class="help-block" role="alert">
                         <span ng-message="required" class="help">Please insert the product name.</span>
+                        <span ng-message="maxlength" class="help">Max 20 char length.</span>
+
                     </div>
             </div>
             <div class="form-group">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="Description" ng-model="productModalCtrl.form.Description" required>
+                    <input type="text" class="form-control" name="Description" ng-model="productModalCtrl.form.Description" ng-maxlength="30" required>
                     <div ng-messages="AddProductForm.Description.$error" ng-show="AddProductForm.$submitted || AddProductForm.Description.$touched" class="help-block" role="alert">
                         <span ng-message="required" class="help">Please insert the product description.</span>
+                        <span ng-message="maxlength" class="help">Max 30 char length.</span>
                     </div>
             </div>
             <div class="form-group">
                     <label>Price</label>
-                    <input type="text" class="form-control" name="Price" ng-model="productModalCtrl.form.Price" required>
+                    <div class="input-group">
+                        <div class="input-group-addon">£</div>
+                        <input type="text" class="form-control" name="Price" ng-model="productModalCtrl.form.Price" ng-pattern="/^[0-9]*$/" ng-maxlength="4" required>
+                    </div>
                     <div ng-messages="AddProductForm.Price.$error" ng-show="AddProductForm.$submitted || AddProductForm.Price.$touched" class="help-block" role="alert">
-                        <span ng-message="required" class="help">Please insert the password.</span>
+                        <span ng-message="required" class="help">Please insert the price.</span>
+                        <span ng-message="pattern" class="help">Only numbers alllowed.</span>
+                        <span ng-message="maxlength" class="help">Max 4 char length.</span>
                     </div>
             </div>
             <div class="form-group">
                     <label>Image Name</label>
-                    <input type="text" class="form-control" name="Image" ng-model="productModalCtrl.form.Image" required>
+                    <input type="text" class="form-control" name="Image" ng-model="productModalCtrl.form.Image" ng-maxlength="15" required>
                     <div ng-messages="AddProductForm.Image.$error" ng-show="AddProductForm.$submitted || AddProductForm.Image.$touched" class="help-block" role="alert">
                         <span ng-message="required" class="help">Please specify the image name.</span>
+                        <span ng-message="maxlength" class="help">Max 15 char length.</span>
                     </div>
             </div>
             <button ng-if="!productModalCtrl.isModifying" type="submit" class="btn btn-primary" ng-disabled="AddProductForm.$invalid">Add product</button>

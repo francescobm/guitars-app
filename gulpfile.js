@@ -84,7 +84,7 @@ return browserify('src/app/index.es6', { debug: true, extensions: ['.js','.es6']
 // inject css and js
 gulp.task('inject', function(){
 	var target = gulp.src('src/index.html');
-	var sourceCss = gulp.src(['./dist/assets/css/bootstrap.min.css','./dist/assets/css/main.min.css']);
+	var sourceCss = gulp.src(['./dist/assets/css/bootstrap.min.css','./dist/assets/css/main.min.css'], {read: false});
 	var sourceJs = gulp.src([
 		'./dist/assets/js/vendor/firebase.js',
 		'./dist/assets/js/vendor/jquery.min.js',
@@ -95,8 +95,8 @@ gulp.task('inject', function(){
 		'./dist/assets/js/vendor/ui-bootstrap.min.js', 
 		'./dist/assets/js/vendor/ui-bootstrap-tpls.min.js',
 		'./dist/assets/js/vendor/jquery.slim.min.js'
-		]);
-	var sourceAppJs = gulp.src('./dist/assets/js/app.min.js');
+		], {read: false});
+	var sourceAppJs = gulp.src('./dist/assets/js/app.min.js', {read: false});
 	return target.pipe(inject(sourceCss, {ignorePath: 'dist'})).pipe(inject(sourceJs, {ignorePath: 'dist'})).pipe(inject(sourceAppJs, {ignorePath: 'dist', name:'app'}))
     .pipe(gulp.dest('dist'));
 })
@@ -119,7 +119,7 @@ gulp.task('clean', function () {
 });
 
 // serve on browser
-gulp.task('serve',['build'], function(){
+gulp.task('serve', function(){
 	runSequence('inject', 'browser-sync', 'watch');
 })
 

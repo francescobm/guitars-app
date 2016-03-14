@@ -8,10 +8,13 @@
  
 ## Setup procedure
 Open a command prompt at the **project folder** and execute following commands:
-Take the following steps to run the project:
 
-1. Run `gem install sass` to install sass gem for sass support
-2. Run `npm install` to update your npm packages
-3. Run `bower install` to update your bower packages
-4. Run first `gulp build` and then launch the project with 'gulp serve'. 
+1. Run `npm install` to update your npm packages
+2. Run `bower install` to update your bower packages
+3. Run `gulp build` to compile the project files for the first time and copy the vendors file into the dist folder.
+4. Run `gulp serve` to launch the project.
+
+## Notes and Authentication
+The app has been built on top of Firebase and requires authentication to access the admin area.
+The app is not responsive at this stage.
 

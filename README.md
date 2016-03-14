@@ -5,6 +5,7 @@
 2. Ruby min 2.2.X
  1. Ruby https://www.ruby-lang.org/en/downloads/
  2. Ruby on Windows http://rubyinstaller.org/downloads/
+3. Sass installed (`gem install sass`)
  
 ## Setup procedure
 Open a command prompt at the **project folder** and execute following commands:

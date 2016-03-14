@@ -15,6 +15,6 @@ Open a command prompt at the **project folder** and execute following commands:
 4. Run `gulp serve` to launch the project.
 
 ## Notes and Authentication
-The app has been built on top of Firebase and requires authentication to access the admin area.
-The app is not responsive at this stage.
+- The app has been built on top of Firebase and requires authentication to access the admin area.
+- The app is not responsive at this stage.
 

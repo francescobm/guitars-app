@@ -1,4 +1,4 @@
-# Guitar Store. An awsome AngularFire store.
+# Guitar Store. An awesome AngularFire store.
 
 ## Prerequisites
 1. NodeJS min 4.2.X https://nodejs.org

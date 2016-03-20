@@ -6,6 +6,7 @@
  1. Ruby https://www.ruby-lang.org/en/downloads/
  2. Ruby on Windows http://rubyinstaller.org/downloads/
 3. Sass installed (`gem install sass`)
+4. Karma Jasmine installed
  
 ## Setup procedure
 Open a command prompt at the **project folder** and execute following commands:
@@ -14,8 +15,8 @@ Open a command prompt at the **project folder** and execute following commands:
 2. Run `bower install` to update your bower packages
 3. Run `gulp build` to compile the project files for the first time and copy the vendors file into the dist folder.
 4. Run `gulp serve` to launch the project.
+5. Run 'karma start' to run test.
 
 ## Notes and Authentication
 - The app has been built on top of Firebase and requires authentication to access the admin area.
-- The app is not responsive at this stage.
 

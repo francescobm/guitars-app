@@ -31,9 +31,21 @@ a{
 	.navbar-right{
 		margin-top:10px;
 	}
-	.nav>li>a:hover{
-		background-color:transparent;
-		color:$color-font-redish;
+	.nav>li>a{
+		&:hover{
+			background-color:transparent;
+			color:$color-font-redish;
+		}
+
+		&:focus{
+				background-color:transparent;
+				outline:0;	
+		}
+
+	}
+
+	.navbar-toggle .icon-bar {
+		background-color:#fff;
 	}
 }
 
@@ -48,7 +60,24 @@ section{
 
 	.table{
 		margin-top:20px;
+
 	}
+	dl{
+			dt{
+				background: $color-light-grey;
+				color: $color-dark-bg;
+				padding:5px;
+				&.first{
+					background: $color-font-blue;
+					color: $color-font-light;
+				}
+			}
+			dd{
+				padding:5px;
+				a{ padding-right:20px;}
+			}
+		}
+
 	a{
 		&.delete{
 			color:$color-font-redish;

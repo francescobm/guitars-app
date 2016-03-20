@@ -15,9 +15,9 @@
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav navbar-right">
 		        <li><a ng-class="{active: headerCtrl.active === 'home'}" href ui-sref="home">Home</a></li>
-		        <li><a ng-class="{active: headerCtrl.active === 'admin'}" href ui-sref="admin" ng-if="headerCtrl.loggedin">Admin</a></li>
+		        <li><a id="admin" ng-class="{active: headerCtrl.active === 'admin'}" href ui-sref="admin" ng-if="headerCtrl.loggedin">Admin</a></li>
 		        <li><a href ng-click="headerCtrl.launchLoginModal()" ng-if="!headerCtrl.loggedin">Login</a></li>
-		        <li><a href ng-click="headerCtrl.logout()" ng-if="headerCtrl.loggedin">Logout</a></li>
+		        <li><a href id="logout" ng-click="headerCtrl.logout()" ng-if="headerCtrl.loggedin">Logout</a></li>
 		      </ul>
 		    </div> 
 		 </div>

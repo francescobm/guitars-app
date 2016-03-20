@@ -1,7 +1,7 @@
 {
-  "name": "wedding-app",
+  "name": "guitars-app",
   "version": "1.0.0",
-  "description": "Francesco and Fatiha application",
+  "description": "Francesco Greppi",
   "dependencies": {
     "gulp": "^3.9.1"
   },

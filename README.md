@@ -18,4 +18,5 @@ Open a command prompt at the **project folder** and execute following commands:
 
 ## Notes and Authentication
 - The app has been built on top of Firebase and requires authentication to access the admin area.
+- To access admin area: username `test@test.com` pw `admin`
 
